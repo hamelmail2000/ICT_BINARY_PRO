@@ -1,1 +1,11 @@
+//@version=6
+indicator("ICT Binary Pro Core V2.1", overlay=true)
 
+groupStructure="Structure"
+internalLength=input.int(3,"Internal Swing",minval=2)
+externalLength=input.int(8,"External Swing",minval=5)
+atrLength=input.int(14,"ATR Length")
+
+atr=ta.atr(atrLength)
+
+plot(close,display=display.none)
